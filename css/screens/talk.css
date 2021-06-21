@@ -1,0 +1,160 @@
+.talk-body {
+  background-color: #abc1d1;
+  height: 400vh;
+}
+
+.status-bar-talk {
+  z-index: 2;
+  background-color: #abc1d1;
+}
+
+.talk-header {
+  margin-top: 10px;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0px;
+  background-color: #abc1d1;
+}
+
+.talk-header h1 {
+  padding-left: 80px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-talk {
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s linear;
+}
+
+.talk_timestamp {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #92a4b2;
+  color: white;
+}
+
+.message-row {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.message-author {
+  opacity: 0.8;
+  font-size: 13px;
+  margin-bottom: 13px;
+  display: block;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 9px 13px;
+  border-radius: 10px;
+  margin-right: 5px;
+  border-top-left-radius: 0px;
+  font-size: 18px;
+}
+
+.message-info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__time {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.message-row-right {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.message__bubble-rigth {
+  background-color: var(--yellow);
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  margin-left: 5px;
+}
+
+.talk-reply {
+  background-color: white;
+  padding: 5px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.talk-repla__add-icon {
+  width: 10%;
+  margin-left: 20px;
+}
+
+.talk-reply input {
+  width: 90%;
+  border-radius: 20px;
+  height: 35px;
+  padding-left: 30px;
+  font-size: 20px;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.talk-reply__btns {
+  position: absolute;
+  right: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.talk-reply__btns button {
+  background-color: var(--yellow);
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-left: 20px;
+  border: none;
+}
+
+.talk-reply:focus-within .talk-repla__add-icon,
+.talk-reply:focus-within .talk-reply__btns {
+  opacity: 0;
+  display: none;
+}
+
+.talk-reply:focus-within input {
+  width: 98vw;
+  transform: translateX(5px) translateY(-80px);
+}
+
+.talk-reply:focus-within {
+  transform: translateY(80px);
+}

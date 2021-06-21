@@ -1,0 +1,34 @@
+.setting-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+
+.setting-column {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 100;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.setting-column i {
+  margin: 0px 20px;
+}
+
+.setting-column__left {
+  display: flex;
+  justify-content: space-between;
+}
+
+.setting-column__right {
+  opacity: 0.6;
+}
+
+.setting-column__left span {
+  padding-left: 10px;
+  display: block;
+  text-align: left;
+}
